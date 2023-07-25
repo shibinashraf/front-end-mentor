@@ -1,4 +1,3 @@
-import "./QrCode.css";
 import qr  from './assets/qr.png';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
