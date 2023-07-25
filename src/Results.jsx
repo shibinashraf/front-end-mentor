@@ -3,10 +3,12 @@ import memory from './assets/icon-memory.svg'
 import reaction from './assets/icon-reaction.svg'
 import verbal from './assets/icon-verbal.svg'
 import visual from './assets/icon-visual.svg'
+import Pagenav from "./components/Pagenav"
 
 const Results = () =>{
     return(
         <div className ='md:h-screen bg-cyan-100 flex justify-center items-center'>
+            <Pagenav />
         <div className=" bg-white rounded-xl shadow-md h-[60%] w-[60%] flex flex-col md:flex-row">
             <div className="bg-blue-500 h-full md:w-[40%] p-6 rounded-xl flex-row justify-center align-center">
                 <p className="text-center text-white text-xl font-bold ">Your Result</p>
