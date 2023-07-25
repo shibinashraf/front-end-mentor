@@ -8,8 +8,8 @@ const App = () => {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="qr-code" element={<QrCode />} />
-        <Route path="results" element={<Results />} />
+        <Route path="/qr-code" element={<QrCode />} />
+        <Route path="/results" element={<Results />} />
       </Routes>
     </>
   );

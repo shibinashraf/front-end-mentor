@@ -8,10 +8,10 @@ export default function Pagenav(){
             <li className ="hover:text-blue-300 pt-2">
             <Link to="/">Home</Link></li>
             <li className="hover:text-blue-300 pt-2">
-            <Link to="qr-code">QrCode</Link>
+            <Link to="/qr-code">QrCode</Link>
           </li>
           <li className="hover:text-blue-300 pt-2">
-            <Link to="results">Results</Link>
+            <Link to="/results">Results</Link>
           </li>
           </ul>
         </div>
