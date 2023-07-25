@@ -1,4 +1,3 @@
-import "./App.css";
 import QrCode from "./QrCode";
 import Results from "./Results";
 import Home from "./Home";
