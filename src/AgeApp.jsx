@@ -3,12 +3,33 @@ import {useState} from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Pagenav from './components/Pagenav';
 
+function calculateAge(year, month, day) {
+    const currentDate = new Date();
+    const birthDate = new Date(year, month - 1, day); // month is zero-based, so we subtract 1
+  
+    // Calculate the age in milliseconds
+    const ageInMilliseconds = currentDate - birthDate;
+  
+    // Calculate years
+    const years = Math.floor(ageInMilliseconds / (365.25 * 24 * 60 * 60 * 1000));
+  
+    // Calculate the remaining days
+    const remainingDays = ageInMilliseconds % (365.25 * 24 * 60 * 60 * 1000);
+  
+    // Calculate months and days
+    const daysInMonth = 30.44; // Average days in a month considering a year of 365.25 days
+    const months = Math.floor(remainingDays / (daysInMonth * 24 * 60 * 60 * 1000));
+    const days = Math.floor((remainingDays % (daysInMonth * 24 * 60 * 60 * 1000)) / (24 * 60 * 60 * 1000));
+  
+    return { years, months, days };
+  }
 export default function AgeApp(){
     const [Day, SetDay] = useState();
     const [Month, SetMonth] = useState();
     const [Year, SetYear] = useState();
     const handleClick = () => {
-       let today = new Date();
+      let age = calculateAge(Day,Month,Year)
+       console.log(age)
       
       };
 
