@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import add from './assets/add.png';
 import remove from './assets/remove.png'
+import Pagenav from "./components/Pagenav";
 
 export default function ToDo(){
         const [tasks, setTasks] = useState([]);
@@ -51,6 +52,7 @@ export default function ToDo(){
   };
     return(
         <div className="bg-blue-600 h-screen w-screen flex flex-col justify-center gap-4 items-center">
+        <Pagenav/>
             <div className="text-white font-bold text-xl"><p>To DO App</p></div>
             
             <div className="h-3/4 w-3/4 bg-white rounded-xl flex flex-col items-center p-2 justify-evenly">

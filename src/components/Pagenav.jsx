@@ -31,11 +31,15 @@ export default function Pagenav(){
         setIsShown(false)
       }, 3000);
     };
+    const handleClick = event => {
+      setIsShown(true);
+    };
+    
     
   
     return(
         <>
-      <button onMouseEnter={handleMouseEnter}><div className="w-14 h-14 rounded-full flex fixed bottom-8 right-4 hover:w-16 hover:h-16 " ><img src ={nav} alt='nav'></img></div></button>
+      <button onClick={handleClick} onMouseEnter={handleMouseEnter}><div className="w-14 h-14 rounded-full flex fixed bottom-8 right-4 hover:w-16 hover:h-16 " ><img src ={nav} alt='nav'></img></div></button>
       {isShown && <NavMenu />}
         </>
 
