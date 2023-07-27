@@ -17,17 +17,25 @@ export default function Pagenav(){
                   <li className="hover:text-blue-300 pt-2">
                     <Link to="/age-app">Age App</Link>
                   </li>
+                  <li className="hover:text-blue-300 pt-2">
+                    <Link to="/to-do-app">To Do App</Link>
+                  </li>
                   </ul>
                 </div>
                 )
                 }
   const [isShown, setIsShown] = useState(false);
-  const handleClick = event => {
-      setIsShown(!isShown);
+  const handleMouseEnter = event => {
+      setIsShown(true);
+      setTimeout(() => {
+        setIsShown(false)
+      }, 3000);
     };
+    
+  
     return(
         <>
-      <button onClick={handleClick}><div className="w-14 h-14 rounded-full flex fixed bottom-8 right-4 hover:w-16 hover:h-16 hover:animate-bounce " ><img src ={nav} alt='nav'></img></div></button>
+      <button onMouseEnter={handleMouseEnter}><div className="w-14 h-14 rounded-full flex fixed bottom-8 right-4 hover:w-16 hover:h-16 " ><img src ={nav} alt='nav'></img></div></button>
       {isShown && <NavMenu />}
         </>
 

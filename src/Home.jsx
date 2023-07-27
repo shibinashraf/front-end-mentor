@@ -21,7 +21,7 @@ export default function Home(){
         <Load/>
       ) : (
         <div className=" bg-slate-900 h-screen w-screen flex flex-col  items-center justify-center">
-            <p className=" text-slate-100 text-center text-3xl ">
+            <p className=" text-slate-100 text-center text-2xl ">
             View my frontend practice projects</p>
             <Pagenav/>
     </div>)}
