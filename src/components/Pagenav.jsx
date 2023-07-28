@@ -32,7 +32,7 @@ export default function Pagenav(){
       }, 3000);
     };
     const handleClick = event => {
-      setIsShown(true);
+      setIsShown(!isShown);
     };
     
     
