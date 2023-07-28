@@ -20,6 +20,9 @@ export default function Pagenav(){
                   <li className="hover:text-blue-300 pt-2">
                     <Link to="/to-do-app">To Do App</Link>
                   </li>
+                  <li className="hover:text-blue-300 pt-2">
+                    <Link to="/landing-page">Landing Page</Link>
+                  </li>
                   </ul>
                 </div>
                 )
